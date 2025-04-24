@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import pic from "../assets/auth-342c7766.svg";
 
@@ -68,8 +69,9 @@ function Signup() {
           <div className="h-10 mb-5">
             <button
               onClick={() => navigate("../login")}
-              className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer"
+              className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer flex items-center justify-center gap-4"
             >
+              <IoIosArrowForward size={21} />
               بازگشت
             </button>
           </div>
@@ -85,11 +87,12 @@ function Signup() {
           <div className="h-10 my-5">
             <button
               onClick={() => setLoginWithMobile(!loginWithMobile)}
-              className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer"
+              className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer flex items-center justify-center gap-4"
             >
               {loginWithMobile
                 ? "ثبت نام با پست الکترونیک"
                 : "ثبت نام با شماره موبایل"}
+              <IoIosArrowBack size={21} />
             </button>
           </div>
         </div>

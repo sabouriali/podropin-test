@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { IoIosArrowBack } from "react-icons/io";
 
 import pic from "../assets/auth-342c7766.svg";
 import logo from "../assets/logo4-93670060.svg";
@@ -30,7 +31,7 @@ function Login() {
 
   return (
     <div className="flex items-start justify-center gap-4">
-      <div className="px-4 min-w-sm h-[calc(100vh-3.5rem)] flex flex-col justify-between">
+      <div className="px-4 min-w-sm h-[calc(100vh-3.5rem)] flex flex-col justify-between overflow-y-scroll">
         <div>
           <div className="h-50 flex items-center justify-center">
             <img src={logo} alt="logo" width={84} />
@@ -102,8 +103,9 @@ function Login() {
           </div>
 
           <div className="h-10 mb-5">
-            <button className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer">
+            <button className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer flex items-center justify-center gap-4">
               ورود با رمز یکبار مصرف
+              <IoIosArrowBack size={21} />
             </button>
           </div>
 
