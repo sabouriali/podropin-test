@@ -38,9 +38,9 @@ function Login() {
           </div>
 
           <div>
-            <p className="mb-2.5">به پادروپین خوش آمدید!</p>
+            <p className="mb-2.5">به باردو خوش آمدید!</p>
             <p className="text-gray-400 mb-5">
-              اگر در پادروپین حساب کاربری دارید، وارد شوید:
+              اگر در باردو حساب کاربری دارید، وارد شوید:
             </p>
           </div>
 
@@ -103,7 +103,10 @@ function Login() {
           </div>
 
           <div className="h-10 mb-5">
-            <button className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer flex items-center justify-center gap-4">
+            <button
+              onClick={() => navigate("../verify-code")}
+              className="h-full w-full px-2.5 rounded-lg text-blue-700 cursor-pointer flex items-center justify-center gap-4"
+            >
               ورود با رمز یکبار مصرف
               <IoIosArrowBack size={21} />
             </button>
@@ -113,7 +116,7 @@ function Login() {
 
           <div className="mb-2.5">
             <p className="text-gray-400">
-              اگر در پادروپین حساب کاربری ندارید، ثبت نام کنید:
+              اگر در باردو حساب کاربری ندارید، ثبت نام کنید:
             </p>
           </div>
 
@@ -129,7 +132,7 @@ function Login() {
 
         <div className="my-2.5">
           <p className="text-[10px] text-center text-gray-400">
-            ورود شما به پادروپین به معنای پذیرش{" "}
+            ورود شما به باردو به معنای پذیرش{" "}
             <span className="text-blue-600">شرایط و قوانین و حریم خصوصی</span>{" "}
             آن است.
           </p>

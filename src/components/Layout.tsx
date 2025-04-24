@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import VerifyCode from "../pages/VerifyCode";
 
 function Layout() {
   return (
@@ -17,6 +18,7 @@ function Layout() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/verify-code" element={<VerifyCode />} />
         </Routes>
       </main>
       <footer></footer>
