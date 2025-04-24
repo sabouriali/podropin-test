@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router";
 
-import Navbar from "./Navbar";
-
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
@@ -10,9 +8,7 @@ import VerifyCode from "../pages/VerifyCode";
 function Layout() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
+      <header></header>
       <main dir="rtl" className="p-4 text-sm">
         <Routes>
           <Route path="/" element={<Home />} />

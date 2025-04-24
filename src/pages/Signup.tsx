@@ -21,7 +21,7 @@ function Signup() {
 
   return (
     <div className="flex items-start justify-center gap-4">
-      <div className="px-4 min-w-sm h-[calc(100vh-3.5rem)] pt-16 flex flex-col justify-between">
+      <div className="px-4 min-w-sm h-[calc(100vh-2rem)] pt-16 flex flex-col justify-between">
         <div>
           <div className="mb-4">
             <p className="mb-3">
@@ -100,7 +100,7 @@ function Signup() {
         </div>
       </div>
 
-      <div className="bg-[#f6f7f9] w-full h-[calc(100vh-3.5rem)] rounded-2xl items-center justify-center hidden md:flex">
+      <div className="bg-[#f6f7f9] w-full h-[calc(100vh-2rem)] rounded-2xl items-center justify-center hidden md:flex">
         <img src={pic} alt="pic" />
       </div>
     </div>

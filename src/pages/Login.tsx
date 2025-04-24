@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { IoIosArrowBack } from "react-icons/io";
 
 import pic from "../assets/auth-342c7766.svg";
-import logo from "../assets/logo4-93670060.svg";
+import logo from "../assets/1000016235-removebg-preview.png";
 
 function Login() {
   const [email, setEmail] = useState<string>();
@@ -31,10 +31,10 @@ function Login() {
 
   return (
     <div className="flex items-start justify-center gap-4">
-      <div className="px-4 min-w-sm h-[calc(100vh-3.5rem)] flex flex-col justify-between overflow-y-scroll">
+      <div className="px-4 min-w-sm h-[calc(100vh-2rem)] flex flex-col justify-between overflow-y-scroll">
         <div>
           <div className="h-50 flex items-center justify-center">
-            <img src={logo} alt="logo" width={84} />
+            <img src={logo} alt="logo" width={200} />
           </div>
 
           <div>
@@ -143,7 +143,7 @@ function Login() {
         </div>
       </div>
 
-      <div className="bg-[#f6f7f9] w-full h-[calc(100vh-3.5rem)] rounded-2xl items-center justify-center hidden md:flex">
+      <div className="bg-[#f6f7f9] w-full h-[calc(100vh-2rem)] rounded-2xl items-center justify-center hidden md:flex">
         <img src={pic} alt="pic" />
       </div>
     </div>
