@@ -51,8 +51,10 @@ function Signup() {
                 htmlFor="mobile"
                 className={`absolute right-4 top-3 cursor-text text-gray-400 transform transition-transform ${
                   mobileFocused
-                    ? "scale-75 -translate-y-3 !text-blue-600"
-                    : mobile && mobile.length > 0 && "scale-75 -translate-y-3"
+                    ? "scale-75 -translate-y-3 translate-x-1/8 !text-blue-600"
+                    : mobile &&
+                      mobile.length > 0 &&
+                      "scale-75 -translate-y-3 translate-x-1/8"
                 }`}
               >
                 {loginWithMobile ? "شماره موبایل" : "پست الکترونیک"}
