@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { IoIosArrowBack } from "react-icons/io";
+import { FcGoogle } from "react-icons/fc";
+import { IoIosArrowBack, IoIosEye, IoIosEyeOff } from "react-icons/io";
 
 import pic from "../assets/auth-342c7766.svg";
 import logo from "../assets/1000016235-removebg-preview.png";
@@ -10,6 +11,7 @@ function Login() {
   const [pass, setPass] = useState<string>();
   const [emailFocused, setEmailFocused] = useState(false);
   const [passFocused, setPassFocused] = useState(false);
+  const [showPass, setShowPass] = useState(false);
 
   const navigate = useNavigate();
 
@@ -27,6 +29,10 @@ function Login() {
 
   function handlePassBlur() {
     setPassFocused(false);
+  }
+
+  function toggleShowPass() {
+    setShowPass(!showPass);
   }
 
   return (
@@ -71,7 +77,7 @@ function Login() {
 
             <div className="relative h-10 mb-2.5">
               <input
-                type="text"
+                type={showPass ? "text" : "password"}
                 id="pass"
                 value={pass}
                 onChange={(e) => setPass(e.target.value)}
@@ -91,6 +97,13 @@ function Login() {
               >
                 کلمه عبور
               </label>
+              <button
+                type="button"
+                onClick={toggleShowPass}
+                className="absolute top-1/2 -translate-y-1/2 left-1.5 text-gray-800 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                {showPass ? <IoIosEyeOff size={20} /> : <IoIosEye size={20} />}
+              </button>
             </div>
 
             <div className="h-10 mb-3">
@@ -101,7 +114,8 @@ function Login() {
           </form>
 
           <div className="h-10 mb-4">
-            <button className="h-full w-full px-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer">
+            <button className="h-full w-full px-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer flex items-center justify-center gap-2">
+              <FcGoogle size={24} />
               ورود یا ثبت نام با حساب گوگل
             </button>
           </div>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import pic from "../assets/auth-342c7766.svg";
+import { FcGoogle } from "react-icons/fc";
 
 function Signup() {
   const [loginWithMobile, setLoginWithMobile] = useState(true);
@@ -81,7 +82,8 @@ function Signup() {
 
         <div>
           <div className="h-10 mb-4">
-            <button className="h-full w-full px-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer">
+            <button className="h-full w-full px-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer flex items-center justify-center gap-2">
+              <FcGoogle size={24} />
               ورود یا ثبت نام با حساب گوگل
             </button>
           </div>
