@@ -7,4 +7,13 @@
 
 body {
   font-family: "Vazirmatn";
+  box-sizing: border-box;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-spinner {
+  appearance: textfield;
 }

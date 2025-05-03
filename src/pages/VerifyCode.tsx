@@ -19,7 +19,7 @@ function VerifyCode() {
   }
 
   return (
-    <div className="flex items-start justify-center gap-4">
+    <div className="flex items-start justify-center gap-4 p-4">
       <div className="px-4 min-w-sm pt-16">
         <p className="mb-2.5">ورود با شماره موبایل</p>
 
