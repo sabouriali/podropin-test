@@ -1,10 +1,11 @@
+// @ts-ignore
 import Mapir from "mapir-react-component";
 import "mapir-react-component/dist/index.css";
 
 function MapComp() {
   const Map = Mapir.setToken({
     scrollZoom: false,
-    transformRequest: (url) => {
+    transformRequest: (url: string) => {
       return {
         url,
         headers: {
