@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { IoIosArrowBack, IoIosEye, IoIosEyeOff } from "react-icons/io";
 
-import logo from "../assets/1000016235-removebg-preview.png";
+import logo from "../../assets/1000016235-removebg-preview.png";
 
 function Login() {
   const [email, setEmail] = useState<string>();

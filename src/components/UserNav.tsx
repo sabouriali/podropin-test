@@ -105,6 +105,7 @@ function UserNav() {
         <div className="h-full">
           <NavLink
             to="/settings"
+            end
             className={({ isActive }) =>
               `flex items-center gap-2 px-3 h-full border-b-2 cursor-pointer transition-colors ${
                 isActive

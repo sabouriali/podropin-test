@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { IoIosArrowForward } from "react-icons/io";
 
-import pic from "../assets/auth-342c7766.svg";
+import pic from "../../assets/auth-342c7766.svg";
 
 function VerifyCode() {
   const [mobile, setMobile] = useState<string>();

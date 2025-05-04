@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FaBox, FaClock, FaShippingFast, FaWallet } from "react-icons/fa";
 
-import OrderInfo from "../sections/new-order-single/OrderInfo";
-import Payment from "../sections/new-order-single/Payment";
-import ShippingService from "../sections/new-order-single/ShippingService";
-import Timing from "../sections/new-order-single/Timing";
+import OrderInfo from "../../sections/new-order-single/OrderInfo";
+import Payment from "../../sections/new-order-single/Payment";
+import ShippingService from "../../sections/new-order-single/ShippingService";
+import Timing from "../../sections/new-order-single/Timing";
 
 const steps = [OrderInfo, ShippingService, Timing, Payment];
 
@@ -100,7 +100,10 @@ function NewOrderSingle() {
       </div>
 
       <div className="mt-6">
-        {steps.map((Step, index) => step == index + 1 && <Step key={index} />)}
+        {steps.map(
+          (Step, index) =>
+            step == index + 1 && <Step key={index} nextStep={handleNextStep} />
+        )}
       </div>
 
       <div className="flex items-center justify-around mt-6">

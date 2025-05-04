@@ -134,7 +134,9 @@ function PackageInfo() {
             </span>
           </div>
 
-          <p className="text-xs">در صورت مغایرت وزن، بسته مرجوع می‌شود.</p>
+          <p className="text-xs text-gray-400">
+            در صورت مغایرت وزن، بسته مرجوع می‌شود.
+          </p>
         </div>
 
         <div>
@@ -165,7 +167,9 @@ function PackageInfo() {
             </span>
           </div>
 
-          <p className="text-xs">مبنای محاسبه بیمه، قیمت فوق است.</p>
+          <p className="text-xs text-gray-400">
+            مبنای محاسبه بیمه، قیمت فوق است.
+          </p>
         </div>
 
         <div className="relative h-10">
@@ -186,7 +190,7 @@ function PackageInfo() {
           </button>
 
           <div
-            className={`absolute top-12 border border-gray-300 bg-white rounded-lg w-70 h-40 p-2 overflow-y-scroll shadow-lg z-10 transition ${
+            className={`absolute top-12 border border-gray-300 bg-white rounded-lg w-full h-40 p-2 overflow-y-scroll shadow-lg z-10 transition ${
               openContent
                 ? "opacity-100 visible"
                 : "opacity-0 -translate-y-4 invisible"
@@ -230,7 +234,9 @@ function PackageInfo() {
             </label>
           </div>
 
-          <p className="text-xs">نام محصول موجود در بسته را وارد کنید.</p>
+          <p className="text-xs text-gray-400">
+            نام محصول موجود در بسته را وارد کنید.
+          </p>
         </div>
 
         <div className="relative h-10">
@@ -249,7 +255,7 @@ function PackageInfo() {
           </button>
 
           <div
-            className={`absolute top-12 border border-gray-300 bg-white rounded-lg w-70 h-40 p-2 overflow-y-scroll shadow-lg z-10 transition ${
+            className={`absolute top-12 border border-gray-300 bg-white rounded-lg w-full h-40 p-2 overflow-y-scroll shadow-lg z-10 transition ${
               openSize
                 ? "opacity-100 visible"
                 : "opacity-0 -translate-y-4 invisible"

@@ -6,7 +6,11 @@ import PackageInfo from "./order-info/PackageInfo";
 import Description from "./order-info/Description";
 import { IoIosArrowBack } from "react-icons/io";
 
-function OrderInfo() {
+interface OrderInfoProps {
+  nextStep: () => void;
+}
+
+function OrderInfo({ nextStep }: OrderInfoProps) {
   return (
     <>
       <p className="text-gray-400 mb-4">لطفا اطلاعات سفارش را وارد کنید.</p>
@@ -27,7 +31,10 @@ function OrderInfo() {
             ذخیره
           </button>
 
-          <button className="flex items-center gap-4 justify-center cursor-pointer w-full h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-lg transition-colors">
+          <button
+            onClick={nextStep}
+            className="flex items-center gap-4 justify-center cursor-pointer w-full h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-lg transition-colors"
+          >
             انتخاب سرویس‌دهنده
             <IoIosArrowBack size={20} />
           </button>
@@ -46,7 +53,10 @@ function OrderInfo() {
 
           <div className="h-0.25 w-full my-6 bg-gray-100" />
 
-          <button className="flex items-center gap-4 justify-center cursor-pointer w-full h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-lg transition-colors mb-5">
+          <button
+            onClick={nextStep}
+            className="flex items-center gap-4 justify-center cursor-pointer w-full h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-lg transition-colors mb-5"
+          >
             انتخاب سرویس‌دهنده
             <IoIosArrowBack size={20} />
           </button>
