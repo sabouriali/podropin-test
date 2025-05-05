@@ -5,11 +5,35 @@ import OrderInfo from "../../sections/new-order-single/OrderInfo";
 import Payment from "../../sections/new-order-single/Payment";
 import ShippingService from "../../sections/new-order-single/ShippingService";
 import Timing from "../../sections/new-order-single/Timing";
+import NewOrderAside from "../../components/NewOrderAside";
+
+import post from "../../assets/postLogo.png";
+import mahex from "../../assets/mahexLogo.png";
 
 const steps = [OrderInfo, ShippingService, Timing, Payment];
 
+const shippingServices = [
+  {
+    title: "شرکت ملی پست (پیشتاز)",
+    logo: post,
+    time: "۳ تا ۷ روز کاری",
+    features: ["ارسال مجدد"],
+    score: 4.05,
+    cost: 911540,
+  },
+  {
+    title: "ماهکس",
+    logo: mahex,
+    time: "۱ تا ۳ روز کاری",
+    features: ["ارسال مجدد", "جمع‌آوری رایگان"],
+    score: 3.71,
+    cost: 1085000,
+  },
+];
+
 function NewOrderSingle() {
   const [step, setStep] = useState(1);
+  const [shipper, setShipper] = useState<number>();
 
   function handleNextStep() {
     if (step < 4) {
@@ -25,7 +49,7 @@ function NewOrderSingle() {
   }
 
   return (
-    <section className="mt-12">
+    <section className="mt-12 min-h-[calc(100vh-8.5rem)]">
       <div className="justify-center flex items-center gap-2">
         <div
           className={`relative transition-colors ${
@@ -99,11 +123,22 @@ function NewOrderSingle() {
         </div>
       </div>
 
-      <div className="mt-6">
-        {steps.map(
-          (Step, index) =>
-            step == index + 1 && <Step key={index} nextStep={handleNextStep} />
-        )}
+      <div className="mt-6 flex gap-6 justify-center">
+        <div>
+          {steps.map(
+            (Step, index) =>
+              step == index + 1 && (
+                <Step
+                  key={index}
+                  shippingServices={shippingServices}
+                  onSetShipper={setShipper}
+                  shipper={shipper}
+                />
+              )
+          )}
+        </div>
+
+        <NewOrderAside step={step} nextStep={handleNextStep} />
       </div>
 
       <div className="flex items-center justify-around mt-6">
