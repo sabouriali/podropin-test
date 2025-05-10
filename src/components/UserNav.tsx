@@ -45,6 +45,7 @@ function UserNav() {
         </NavLink>
         <NavLink
           to="/settings"
+          end
           className={({ isActive }) =>
             `flex items-center justify-center flex-col gap-1.5 cursor-pointer transition-colors ${
               isActive ? "text-blue-600" : "text-gray-700"

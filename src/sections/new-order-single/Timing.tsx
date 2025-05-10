@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import { FaBoxesPacking } from "react-icons/fa6";
+import { FaArrowRightLong, FaBoxesPacking } from "react-icons/fa6";
 
 const allowedPickupTimes = [
   "پنج‌شنبه ۱ خرداد، ۸ تا ۱۱",
@@ -24,9 +24,10 @@ interface TimingProps {
     cost: number;
   }[];
   shipper: number | undefined;
+  handleBack: () => void;
 }
 
-function Timing({ shippingServices, shipper }: TimingProps) {
+function Timing({ shippingServices, shipper, handleBack }: TimingProps) {
   const [pickupTime, setPickupTime] = useState("");
   const [deliverTime, setDeliverTime] = useState("");
   const [openPickupTime, setOpenPickupTime] = useState(false);
@@ -52,11 +53,16 @@ function Timing({ shippingServices, shipper }: TimingProps) {
 
   return (
     <>
-      <p className="text-gray-400 mb-4">
-        زمان‌بندی ارسال مورد نظر خود را انتخاب کنید:
-      </p>
+      <div className="flex items-center gap-6 mb-4 pr-4">
+        <button className="cursor-pointer" onClick={handleBack}>
+          <FaArrowRightLong />
+        </button>
+        <p className="text-gray-400">
+          زمان‌بندی ارسال مورد نظر خود را انتخاب کنید:
+        </p>
+      </div>
 
-      <section className="p-4 bg-white rounded-2xl mb-6 md:max-w-[calc(100vw-28.5rem)] md:w-[919.733px] min-w-sm space-y-4">
+      <section className="p-4 bg-white rounded-2xl mb-6 min-w-sm space-y-4">
         <div className="rounded-lg flex items-start justify-between h-40">
           <div className="flex items-center gap-4">
             <div className="w-17.5 h-17.5 content-center">

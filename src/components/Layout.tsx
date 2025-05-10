@@ -14,6 +14,7 @@ import UserLayout from "./UserLayout";
 import AuthLayout from "./AuthLayout";
 import NewOrderLayout from "./NewOrderLayout";
 import AddressBookSender from "../pages/settings/AddressBookSender";
+import SettingsLayout from "./SettingsLayout";
 
 function Layout() {
   return (
@@ -33,8 +34,8 @@ function Layout() {
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/reports" element={<Reports />} />
 
-            <Route path="/settings" element={<Settings />}>
-              <Route index />
+            <Route path="/settings" element={<SettingsLayout />}>
+              <Route index element={<Settings />} />
               <Route
                 path="address-book/sender"
                 element={<AddressBookSender />}

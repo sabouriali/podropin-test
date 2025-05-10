@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { type LatLngExpression } from "leaflet";
 import { BsPlusLg } from "react-icons/bs";
 import { MdOutlineWarehouse } from "react-icons/md";
 import { RiSearch2Line } from "react-icons/ri";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import SelectOnMap from "../../sections/add-address-sender/SelectOnMap";
 import AddDetails from "../../sections/add-address-sender/AddDetails";
@@ -25,6 +27,8 @@ function AddressBookSender() {
   const [def, setDef] = useState(false);
   const [step, setStep] = useState(1);
 
+  const navigate = useNavigate();
+
   function handleSearchFocus() {
     setSearchFocused(true);
   }
@@ -46,7 +50,7 @@ function AddressBookSender() {
   return (
     <>
       {addAddress ? (
-        <div className="p-4 rounded-2xl bg-white w-3xl h-fit">
+        <div className="p-4 rounded-2xl bg-white w-full h-fit">
           {step == 1 ? (
             <SelectOnMap
               onHandleLocation={handleLocation}
@@ -84,9 +88,17 @@ function AddressBookSender() {
           )}
         </div>
       ) : (
-        <div className="p-4 rounded-2xl bg-white w-3xl min-h-[calc(100vh-7.5rem)]">
+        <div className="p-4 rounded-2xl bg-white w-full min-h-[calc(100vh-7.5rem)]">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-base font-medium">آدرس فرستنده</h2>
+            <div className="flex items-center gap-6">
+              <button
+                onClick={() => navigate("/settings")}
+                className="md:hidden cursor-pointer"
+              >
+                <FaArrowRightLong />
+              </button>
+              <h2 className="text-base font-medium">آدرس فرستنده</h2>
+            </div>
             <button
               onClick={() => setAddAddress(true)}
               className="flex items-center gap-2 cursor-pointer h-10 px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg transition-colors"

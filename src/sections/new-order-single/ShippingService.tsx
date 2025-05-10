@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 interface ShippingServiceProps {
   shippingServices: {
@@ -11,20 +12,27 @@ interface ShippingServiceProps {
   }[];
   onSetShipper: React.Dispatch<React.SetStateAction<number | undefined>>;
   shipper: number | undefined;
+  handleBack: () => void;
 }
 
 function ShippingService({
   shippingServices,
   onSetShipper,
   shipper,
+  handleBack,
 }: ShippingServiceProps) {
   return (
     <>
-      <p className="text-gray-400 mb-4">
-        سرویس‌دهنده مورد نظر خود را انتخاب کنید:
-      </p>
+      <div className="flex items-center gap-6 mb-4 pr-4">
+        <button className="cursor-pointer" onClick={handleBack}>
+          <FaArrowRightLong />
+        </button>
+        <p className="text-gray-400">
+          سرویس‌دهنده مورد نظر خود را انتخاب کنید:
+        </p>
+      </div>
 
-      <section className="p-4 bg-white rounded-2xl mb-6 md:max-w-[calc(100vw-28.5rem)] md:w-[919.733px] min-w-sm space-y-4">
+      <section className="p-4 bg-white rounded-2xl mb-6 space-y-4">
         {shippingServices.map((service, index) => (
           <div
             key={index}

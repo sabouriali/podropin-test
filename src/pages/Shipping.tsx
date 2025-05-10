@@ -19,14 +19,14 @@ function Shipping() {
   }
 
   return (
-    <section className="text-gray-700 md:p-6">
+    <section className="text-gray-700 md:p-4 md:container mx-auto">
       <div className="h-17.5 content-center">
         <h1 className="text-base font-semibold text-center md:text-right">
           سفارش‌ها
         </h1>
       </div>
 
-      <div className="bg-white rounded-2xl md:p-6">
+      <div className="bg-white rounded-2xl md:p-6 mx-auto">
         <div className="flex items-center overflow-x-scroll border-b border-gray-200 no-scrollbar">
           <button
             onClick={() => handleTab("all")}

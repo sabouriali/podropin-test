@@ -80,7 +80,7 @@ function NewOrderAside({ step, nextStep }: NewOrderAsideProps) {
         )}
       </div>
 
-      <div className="hidden md:block sticky top-6 p-4 w-sm h-fit bg-white rounded-2xl mt-9">
+      <div className="hidden md:block sticky top-6 p-4 w-1/3 min-w-xs h-fit bg-white rounded-2xl mt-9">
         {step === 1 && (
           <>
             <h3 className="flex items-center gap-2 mb-6">

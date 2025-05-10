@@ -49,7 +49,7 @@ function NewOrderSingle() {
   }
 
   return (
-    <section className="mt-12 min-h-[calc(100vh-8.5rem)]">
+    <section className="mt-12 min-h-[calc(100vh-8.5rem)] md:container mx-auto">
       <div className="justify-center flex items-center gap-2">
         <div
           className={`relative transition-colors ${
@@ -124,7 +124,7 @@ function NewOrderSingle() {
       </div>
 
       <div className="mt-6 flex gap-6 justify-center">
-        <div>
+        <div className="w-2/3">
           {steps.map(
             (Step, index) =>
               step == index + 1 && (
@@ -133,28 +133,13 @@ function NewOrderSingle() {
                   shippingServices={shippingServices}
                   onSetShipper={setShipper}
                   shipper={shipper}
+                  handleBack={handlePrevStep}
                 />
               )
           )}
         </div>
 
         <NewOrderAside step={step} nextStep={handleNextStep} />
-      </div>
-
-      <div className="flex items-center justify-around mt-6">
-        <button
-          onClick={handlePrevStep}
-          className="px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white cursor-pointer transition-colors"
-        >
-          قبلی
-        </button>
-
-        <button
-          onClick={handleNextStep}
-          className="px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white cursor-pointer transition-colors"
-        >
-          بعدی
-        </button>
       </div>
     </section>
   );
